@@ -1023,7 +1023,7 @@ void nobMilitary::Capture(const unsigned char new_owner)
             coinsDisabled = false;
             coinsDisabledVirtual = false;
             break;
-        case 1: // disable coin order
+        case 0: // disable coin order
             coinsDisabled = true;
             coinsDisabledVirtual = true;
             break;
