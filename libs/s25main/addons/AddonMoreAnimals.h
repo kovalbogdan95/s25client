@@ -17,11 +17,11 @@ public:
         : AddonList(AddonId::MORE_ANIMALS, AddonGroup::Economy, _("More trees spawn animals"),
                     _("Adjust the fraction of trees that spawn animals."),
                     {
-                      _("default"),
+                      _("+500%"),
                       _("+50%"),
                       _("+100%"),
                       _("+200%"),
-                      _("+500%"),
+                      _("default"),
                       _("+1000%"),
                     })
     {}

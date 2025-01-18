@@ -16,6 +16,6 @@ class AddonAutoFlags : public AddonBool
 public:
     AddonAutoFlags()
         : AddonBool(AddonId::AUTOFLAGS, AddonGroup::Economy, _("Automatic flag placement"),
-                    _("Automatically places flags on newly build roads"))
+                    _("Automatically places flags on newly build roads"), true)
     {}
 };

@@ -16,8 +16,8 @@ public:
                       "Produce random ware: S2-Default\n"
                       "Produce nothing: RttR-Default"),
                     {
-                      _("Produce random ware"),
                       _("Produce nothing"),
-                    })
+                      _("Produce random ware"),
+                    }, 0)
     {}
 };

@@ -14,6 +14,6 @@ class AddonMilitaryHitpoints : public AddonBool
 public:
     AddonMilitaryHitpoints()
         : AddonBool(AddonId::MILITARY_HITPOINTS, AddonGroup::GamePlay | AddonGroup::Military, _("Military Hitpoints"),
-                    _("Display the hitpoints of units in military buildings."))
+                    _("Display the hitpoints of units in military buildings."), true)
     {}
 };

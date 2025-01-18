@@ -17,6 +17,6 @@ public:
     AddonRefundOnEmergency()
         : AddonBool(AddonId::REFUND_ON_EMERGENCY, AddonGroup::Economy, _("Refund materials in emergency program"),
                     _("Get building materials back when a building is destroyed "
-                      "and your emergency program is active."))
+                      "and your emergency program is active."), true)
     {}
 };

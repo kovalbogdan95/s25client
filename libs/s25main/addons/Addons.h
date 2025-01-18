@@ -56,6 +56,7 @@
 #include "addons/AddonFrontierDistanceReachable.h"
 
 #include "addons/AddonDurableGeologistSigns.h"
+#include "addons/AddonCatapult.h"
 #include "addons/AddonEconomyModeGameLength.h"
 #include "addons/AddonPeacefulMode.h"
 

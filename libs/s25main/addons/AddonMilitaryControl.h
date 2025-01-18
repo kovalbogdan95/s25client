@@ -17,9 +17,9 @@ public:
                       "Full: Allows players to control in each military building how many soldiers of each rank should "
                       "be stationed there."),
                     {
-                      _("None"),
-                      _("Minimal Control"),
                       _("Full Control"),
+                      _("Minimal Control"),
+                      _("None"),
                     })
     {}
 };

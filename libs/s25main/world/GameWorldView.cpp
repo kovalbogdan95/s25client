@@ -365,7 +365,7 @@ void GameWorldView::DrawNameProductivityOverlay(const TerrainRenderer& terrainRe
             // Is object not belonging to local player?
             if(no->GetPlayer() != gwv.GetPlayerId())
             {
-                if(GetWorld().GetGGS().getSelection(AddonId::MILITARY_AID) == 2 && gwv.GetNumSoldiersForAttack(pt) > 0)
+                if(GetWorld().GetGGS().getSelection(AddonId::MILITARY_AID) == 0 && gwv.GetNumSoldiersForAttack(pt) > 0)
                 {
                     auto* attackAidImage = LOADER.GetImageN("map_new", 20000);
                     attackAidImage->DrawFull(curPos - DrawPoint(0, attackAidImage->getHeight()));
@@ -503,7 +503,7 @@ void GameWorldView::DrawConstructionAid(const MapPoint& pt, const DrawPoint& cur
         // Draw building quality icon
         bm->DrawFull(curPos);
         // Show ability to construct military buildings
-        if(GetWorld().GetGGS().isEnabled(AddonId::MILITARY_AID))
+        if(GetWorld().GetGGS().getSelection(AddonId::MILITARY_AID) != 1)
         {
             if(!GetWorld().IsMilitaryBuildingNearNode(pt, gwv.GetPlayerId())
                && (bq == BuildingQuality::Hut || bq == BuildingQuality::House || bq == BuildingQuality::Castle

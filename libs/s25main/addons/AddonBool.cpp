@@ -7,6 +7,10 @@
 #include "Window.h"
 #include "controls/ctrlCheck.h"
 
+AddonBool::AddonBool(const AddonId id, AddonGroup groups, const std::string& name, const std::string& description, bool defaultState)
+    : Addon(id, groups, name, description, defaultState? 1 : 0)
+{}
+
 AddonBool::AddonBool(const AddonId id, AddonGroup groups, const std::string& name, const std::string& description)
     : Addon(id, groups, name, description, 0)
 {}
@@ -38,7 +42,7 @@ void AddonBool::Gui::setStatus(Window& window, unsigned status)
 
 unsigned AddonBool::Gui::getStatus(const Window& window)
 {
-    const auto* cb = window.GetCtrl<ctrlCheck>(2);
+    const auto* cb = window.GetCtrl<ctrlCheck>(2); // Fetch checkbox
     RTTR_Assert(cb);
     return cb->isChecked() ? 1 : 0;
 }

@@ -73,6 +73,7 @@ void GlobalGameSettings::registerAllAddons()
         AddonDemolishBldWORes,
         AddonDemolitionProhibition,
         AddonDurableGeologistSigns,
+        AddonCatapult,
         AddonEconomyModeGameLength,
         AddonExhaustibleWater,
         AddonFrontierDistanceReachable,
@@ -148,7 +149,11 @@ const GlobalGameSettings::AddonWithState* GlobalGameSettings::getAddon(AddonId i
 bool GlobalGameSettings::isEnabled(AddonId id) const
 {
     const auto* addon = getAddon(id);
-    return addon && addon->status != addon->addon->getDefaultStatus();
+    if (!addon) {
+        return false;
+    }
+
+    return addon->status != 0;
 }
 
 unsigned GlobalGameSettings::getSelection(AddonId id) const

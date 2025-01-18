@@ -14,6 +14,6 @@ class AddonPeacefulMode : public AddonBool
 public:
     AddonPeacefulMode()
         : AddonBool(AddonId::PEACEFULMODE, AddonGroup::GamePlay | AddonGroup::Military, _("Peaceful"),
-                    _("Nobody can attack anyone."))
+                    _("Nobody can attack anyone."), false)
     {}
 };

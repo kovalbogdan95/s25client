@@ -7,7 +7,7 @@
 #include "AddonList.h"
 #include <boost/format.hpp>
 
-const std::array<unsigned, 4> SUPPRESS_UNUSED signDurabilityFactor = {{1, 2, 4, 10}};
+const std::array<unsigned, 4> SUPPRESS_UNUSED signDurabilityFactor = {{10, 1, 2, 4}};
 
 /**
  *  Addon makes resource signs stay visible longer than normal
@@ -19,8 +19,8 @@ public:
         : AddonList(AddonId::DURABLE_GEOLOGIST_SIGNS, AddonGroup::Economy, _("Geologist sign durability"),
                     _("Increase the durability of geologist signs by a factor."),
                     {
+                      (boost::format(_("%1%x")) % signDurabilityFactor[0]).str(),
                       _("Default"),
-                      (boost::format(_("%1%x")) % signDurabilityFactor[1]).str(),
                       (boost::format(_("%1%x")) % signDurabilityFactor[2]).str(),
                       (boost::format(_("%1%x")) % signDurabilityFactor[3]).str(),
                     },

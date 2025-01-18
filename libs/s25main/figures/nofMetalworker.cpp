@@ -119,7 +119,7 @@ bool nofMetalworker::AreWaresAvailable() const
     if(!nofWorkman::AreWaresAvailable())
         return false;
     // If produce nothing on zero is disabled we will always produce something ->OK
-    if(world->GetGGS().getSelection(AddonId::METALWORKSBEHAVIORONZERO) == 0)
+    if(world->GetGGS().getSelection(AddonId::METALWORKSBEHAVIORONZERO) == 1)
         return true;
     // Any tool order?
     if(HasToolOrder())
@@ -195,7 +195,7 @@ helpers::OptionalEnum<GoodType> nofMetalworker::GetRandomTool()
     if(random_array.empty())
     {
         // do nothing if addon is enabled, otherwise produce random ware (orig S2 behavior)
-        if(world->GetGGS().getSelection(AddonId::METALWORKSBEHAVIORONZERO) == 1)
+        if(world->GetGGS().getSelection(AddonId::METALWORKSBEHAVIORONZERO) == 0)
             return boost::none;
         else
             return RANDOM_ELEMENT(TOOL_TO_GOOD);

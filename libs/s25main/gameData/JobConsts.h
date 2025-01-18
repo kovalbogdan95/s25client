@@ -46,7 +46,7 @@ extern const helpers::EnumArray<JobConst, Job> JOB_CONSTS;
 extern const helpers::EnumArray<JobSpriteData, Job> JOB_SPRITE_CONSTS;
 
 /// Katapultmann-Wartezeit
-const unsigned CATAPULT_WAIT1_LENGTH = 1300; // eigenlich 310 - aber hochgestellt wegen zu schneller Warenverteilung
+const unsigned CATAPULT_WAIT1_LENGTH = 100; // eigenlich 310 - aber hochgestellt wegen zu schneller Warenverteilung
 
 /// Position of the ware on a donkey per direction and animation step
 const helpers::EnumArray<std::array<DrawPoint, 8>, Direction> WARE_POS_DONKEY = {{

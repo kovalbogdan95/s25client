@@ -22,6 +22,6 @@ public:
                       _("Fast"),
                       _("Very fast"),
                     },
-                    2)
+                    4)
     {}
 };

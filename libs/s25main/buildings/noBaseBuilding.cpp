@@ -83,7 +83,7 @@ void noBaseBuilding::Destroy()
     // Baukosten zurückerstatten (nicht bei Baustellen)
     const GlobalGameSettings& settings = world->GetGGS();
     if((GetGOT() != GO_Type::Buildingsite)
-       && (settings.isEnabled(AddonId::REFUND_MATERIALS) || settings.isEnabled(AddonId::REFUND_ON_EMERGENCY)))
+       && (settings.getSelection(AddonId::REFUND_MATERIALS) != 2 || settings.isEnabled(AddonId::REFUND_ON_EMERGENCY)))
     {
         // lebt unsere Flagge noch?
         noFlag* flag = GetFlag();
@@ -92,7 +92,7 @@ void noBaseBuilding::Destroy()
             unsigned percent_index = 0;
 
             // wenn Rückerstattung aktiv ist, entsprechende Prozentzahl wählen
-            if(settings.isEnabled(AddonId::REFUND_MATERIALS))
+            if(settings.getSelection(AddonId::REFUND_MATERIALS) != 2)
                 percent_index = settings.getSelection(AddonId::REFUND_MATERIALS);
             // wenn Rückerstattung bei Notprogramm aktiv ist, 50% zurückerstatten
             else if(world->GetPlayer(player).hasEmergency() && settings.isEnabled(AddonId::REFUND_ON_EMERGENCY))

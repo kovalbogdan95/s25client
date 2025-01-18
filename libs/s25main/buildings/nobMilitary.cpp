@@ -1019,11 +1019,11 @@ void nobMilitary::Capture(const unsigned char new_owner)
 
     switch(world->GetGGS().getSelection(AddonId::COINS_CAPTURED_BLD))
     {
-        case 1: // enable coin order
+        case 2: // enable coin order
             coinsDisabled = false;
             coinsDisabledVirtual = false;
             break;
-        case 2: // disable coin order
+        case 1: // disable coin order
             coinsDisabled = true;
             coinsDisabledVirtual = true;
             break;
