@@ -7,7 +7,7 @@
 #include "AddonList.h"
 #include <boost/format.hpp>
 
-const std::array<unsigned, 4> SUPPRESS_UNUSED signDurabilityFactor = {{10, 1, 2, 4}};
+const std::array<unsigned, 4> SUPPRESS_UNUSED signDurabilityFactor = {{4, 1, 2, 10}};
 
 /**
  *  Addon makes resource signs stay visible longer than normal
