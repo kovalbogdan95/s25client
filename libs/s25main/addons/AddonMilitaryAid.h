@@ -18,6 +18,6 @@ public:
     AddonMilitaryAid()
         : AddonList(AddonId::MILITARY_AID, AddonGroup::GamePlay | AddonGroup::Military, _("Military Aid"),
                     _("Adds indicators for constructing or attacking military buildings."),
-                    {_("Off"), _("Construction aid only"), _("Construction and attack aid")}, 0)
+                    { _("Construction and attack aid"), _("Off"), _("Construction aid only"),}, 0)
     {}
 };

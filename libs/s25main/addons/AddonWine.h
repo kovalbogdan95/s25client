@@ -15,6 +15,6 @@ class AddonWine : public AddonBool
 public:
     AddonWine()
         : AddonBool(AddonId::WINE, AddonGroup::Economy, _("Enable wine economy"),
-                    _("Allows to build the wine economy buildings."))
+                    _("Allows to build the wine economy buildings."), true)
     {}
 };

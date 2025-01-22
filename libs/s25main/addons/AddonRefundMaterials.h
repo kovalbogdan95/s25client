@@ -17,11 +17,11 @@ public:
         : AddonList(AddonId::REFUND_MATERIALS, AddonGroup::Economy, _("Refund materials for destroyed buildings"),
                     _("Get building materials back when a building is destroyed."),
                     {
-                      _("No refund"),
-                      _("Refund 25%"),
                       _("Refund 50%"),
+                      _("Refund 25%"),
+                      _("No refund"),
                       _("Refund 75%"),
                       _("Get all back"),
-                    })
+                    }, 0)
     {}
 };

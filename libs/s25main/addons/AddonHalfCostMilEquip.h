@@ -15,6 +15,6 @@ public:
     AddonHalfCostMilEquip()
         : AddonBool(AddonId::HALF_COST_MIL_EQUIP, AddonGroup::Economy, _("Half cost recruits"),
                     _("Smith can create 1 shield & 1 sword "
-                      "for 1 iron + 1 coal instead of 2 iron + 2 coal"))
+                      "for 1 iron + 1 coal instead of 2 iron + 2 coal"), true)
     {}
 };

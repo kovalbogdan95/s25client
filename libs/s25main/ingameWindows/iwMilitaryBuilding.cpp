@@ -33,7 +33,7 @@ iwMilitaryBuilding::iwMilitaryBuilding(GameWorldView& gwv, GameCommandFactory& g
       gwv(gwv), gcFactory(gcFactory), building(building)
 {
     unsigned btOffset = 0;
-    if(gwv.GetWorld().GetGGS().getSelection(AddonId::MILITARY_CONTROL) == 2)
+    if(gwv.GetWorld().GetGGS().getSelection(AddonId::MILITARY_CONTROL) == 0)
     {
         btOffset = 154;
         Resize(Extent(226, 348));
@@ -71,7 +71,7 @@ iwMilitaryBuilding::iwMilitaryBuilding(GameWorldView& gwv, GameCommandFactory& g
         // Minimal troop controls
         AddImageButton(10, DrawPoint(126, btOffset + 147), Extent(32, 32), TextureColor::Grey,
                        LOADER.GetImageN("io_new", 12), _("Send max rank soldiers to a warehouse"));
-    } else if(gwv.GetWorld().GetGGS().getSelection(AddonId::MILITARY_CONTROL) == 2)
+    } else if(gwv.GetWorld().GetGGS().getSelection(AddonId::MILITARY_CONTROL) == 0)
     {
         // Full troop controls
         AddImageButton(10, DrawPoint(126, btOffset + 147), Extent(32, 32), TextureColor::Grey,
@@ -168,7 +168,7 @@ void iwMilitaryBuilding::Draw_()
         }
     }
 
-    if(gwv.GetWorld().GetGGS().getSelection(AddonId::MILITARY_CONTROL) == 2)
+    if(gwv.GetWorld().GetGGS().getSelection(AddonId::MILITARY_CONTROL) == 0)
     {
         const unsigned Y_SPACING = 30;
         for(unsigned i = 0; i < NUM_SOLDIER_RANKS; ++i)

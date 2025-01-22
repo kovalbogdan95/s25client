@@ -15,6 +15,6 @@ class AddonCharburner : public AddonBool
 public:
     AddonCharburner()
         : AddonBool(AddonId::CHARBURNER, AddonGroup::Economy, _("Enable charburner"),
-                    _("Allows to build the charburner."))
+                    _("Allows to build the charburner."), true)
     {}
 };

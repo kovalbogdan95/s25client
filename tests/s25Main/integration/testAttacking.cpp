@@ -477,7 +477,7 @@ BOOST_FIXTURE_TEST_CASE(ConquerBldCoinAddonEnable, AttackFixture<>)
 
 BOOST_FIXTURE_TEST_CASE(ConquerBldCoinAddonDisable, AttackFixture<>)
 {
-    this->ggs.setSelection(AddonId::COINS_CAPTURED_BLD, 2); // addon is active on second run
+    this->ggs.setSelection(AddonId::COINS_CAPTURED_BLD, 0); // addon is active on second run
 
     initGameRNG();
     AddSoldiers(milBld0Pos, 1, 5);

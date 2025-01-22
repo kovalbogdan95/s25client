@@ -14,6 +14,6 @@ public:
                     _("Frontier Distance checks reachability"),
                     _("Military building counts as interior if an attack is permanently impossible. (Path blocked by "
                       "terrain like sea, "
-                      "lava, etc.)"))
+                      "lava, etc.)"), true)
     {}
 };

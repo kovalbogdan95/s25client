@@ -35,6 +35,6 @@ public:
                       _("Very long"),
                       _("Unlimited"),
                     },
-                    1)
+                    5)
     {}
 };

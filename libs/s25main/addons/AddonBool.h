@@ -21,6 +21,7 @@ class AddonBool : public Addon
 
 public:
     AddonBool(AddonId id, AddonGroup groups, const std::string& name, const std::string& description);
+    AddonBool(AddonId id, AddonGroup groups, const std::string& name, const std::string& description, bool defaultState);
 
     unsigned getNumOptions() const override;
 

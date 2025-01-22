@@ -16,6 +16,6 @@ public:
     AddonAIDebugWindow()
         : AddonBool(AddonId::AI_DEBUG_WINDOW, AddonGroup::Other, _("AI Debugging Window"),
                     _("Enable AI Debugging Window\n"
-                      "(possible cheating)"))
+                      "(possible cheating)"), true)
     {}
 };

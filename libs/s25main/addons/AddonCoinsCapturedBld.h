@@ -17,9 +17,9 @@ public:
         : AddonList(AddonId::COINS_CAPTURED_BLD, AddonGroup::Military, _("Coins on captured buildings"),
                     _("Change the coin setting for captured military buildings."),
                     {
+                      _("Disable"),
                       _("Keep setting"),
                       _("Enable"),
-                      _("Disable"),
-                    })
+                    }, 0)
     {}
 };

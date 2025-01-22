@@ -18,3 +18,5 @@
 /external/boost*
 /win32/*.aps
 /data/RTTR/languages/*.mo
+*.cmake
+out/
